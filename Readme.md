@@ -1,10 +1,31 @@
 # 使用说明
 
+- 安装虚拟环境
 
+  ```shell
+  pip install virtualenv
+  ```
 
-- 创建虚拟环境
+- 在根目录Book下创建虚拟环境
 
-- 使用pip安装第三方依赖
+  ```shell
+  python -m venv venv
+  ```
+
+- 进入venv文件夹中的Scripts文件夹下
+
+  ```shell
+  cd venv
+  cd Scripts
+  ```
+
+- 激活虚拟环境
+
+  ```shell
+  activate
+  ```
+
+- 使用pip安装第三方依赖或者根据Pycharm提示自动安装依赖包
 
   ```shell
   pip install -r requirements.txt
@@ -13,10 +34,9 @@
 - 运行migrate命令，创建数据库和数据表
 
   ```shell
-  python manage.py makemigrations
   python manage.py migrate
   ```
-
+  
 - 启动服务器
 
   ```
