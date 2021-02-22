@@ -17,6 +17,10 @@ const getters = {
   navigation: state => state.book.navigation,
   offsetY: state => state.book.offsetY,
   isBookmark: state => state.book.isBookmark,
+  headerSelectedType: state => state.store.headerSelectedType,
+  isEditMode: state => state.store.isEditMode,
+  shelfList: state => state.store.shelfList,
+  shelfSelected: state => state.store.shelfSelected,
 
 }
 

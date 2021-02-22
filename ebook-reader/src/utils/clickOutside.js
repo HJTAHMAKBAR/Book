@@ -4,10 +4,6 @@ export default {
 
   bind (el, binding, vnode) {
     const documentHandler = function(e) {
-      console.log(el)
-      console.log(e.target);
-      console.log(vnode);
-      console.log(binding);
 
       if(!vnode.context || el.contains(e.target)) {
         return false;

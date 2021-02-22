@@ -4,11 +4,11 @@
       <img class="logo" src="../../assets/logo.png" alt="布课网logo">
     </div>
     <div class="title-wrapper">
-      <div class="title-home-wrapper" @click="">
+      <div class="title-home-wrapper" @click="goToHome" :class="{'selected' : headerSelectedType === 1}">
         <span class="icon-shake icon"></span>
         <span class="title">首页</span>
       </div>
-      <div class="title-shelf-wrapper" @click="">
+      <div class="title-shelf-wrapper" @click="goToShelf" :class="{'selected' : headerSelectedType === 2}">
         <span class="icon-shelf icon"></span>
         <span class="title">书架</span>
       </div>
@@ -44,7 +44,8 @@ export default {
     return {
       searchText: '',
       isFixed: false,
-      isSearchVisible: false
+      isSearchVisible: false,
+      selectedType: 1
     }
   },
   watch: {
@@ -62,6 +63,14 @@ export default {
     },
     hideSearchList() {
       this.isSearchVisible = false
+    },
+    goToShelf() {
+      this.setHeaderSelectedType(2)
+      this.$router.push('/store/shelf')
+    },
+    goToHome() {
+      this.setHeaderSelectedType(1)
+      this.$router.push('/store/home')
     }
   }
 }
@@ -76,8 +85,8 @@ export default {
   left: 0;
   display: flex;
   width: 100%;
-  min-width: 1000px;
   height: px2rem(48);
+  background: burlywood;
 
   &.fixed {
     border-bottom: 1px solid #DADFE6;
@@ -105,6 +114,10 @@ export default {
       .title {
         padding: px2rem(5);
       }
+      &.selected {
+        background-color: #7DA889;
+        box-shadow: 0 px2rem(2) px2rem(2) 0 rgba(0, 0, 0, .5);
+      }
     }
 
     .title-shelf-wrapper {
@@ -113,6 +126,10 @@ export default {
 
       .title {
         padding: px2rem(5);
+      }
+      &.selected {
+        background-color: #7DA889;
+        box-shadow: 0 px2rem(2) px2rem(2) 0 rgba(0, 0, 0, .5);
       }
     }
   }

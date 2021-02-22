@@ -117,15 +117,34 @@ export const storeHomeMixin = {
   computed: {
     ...mapGetters([
       'offsetY',
-      'hotSearchOffsetY'
+      'hotSearchOffsetY',
+      'headerSelectedType'
     ])
   },
   methods: {
     ...mapActions([
       'setOffsetY',
-      'setHotSearchOffsetY'
+      'setHotSearchOffsetY',
+      'setHeaderSelectedType'
     ])
   }
 
 
+}
+
+export const shelfMixin = {
+  computed: {
+    ...mapGetters([
+      'isEditMode',
+      'shelfList',
+      'shelfSelected',
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'setIsEditMode',
+      'setShelfList',
+      'setShelfSelected',
+    ]),
+  }
 }

@@ -50,6 +50,18 @@ const actions = {
   setHotSearchOffsetY({ commit }, offsetY) {
     return commit('SET_HOT_SEARCH_OFFSETY', offsetY)
   },
+  setHeaderSelectedType({ commit }, headerSelectedType) {
+    return commit('SET_HEADERSELECTEDTYPE', headerSelectedType)
+  },
+  setIsEditMode({ commit }, isEditMode) {
+    return commit('SET_IS_EDIT_MODE', isEditMode)
+  },
+  setShelfList({ commit }, list) {
+    return commit('SET_SHELF_LIST', list)
+  },
+  setShelfSelected({ commit }, selected) {
+    return commit('SET_SHELF_SELECTED', selected)
+  },
 
 }
 

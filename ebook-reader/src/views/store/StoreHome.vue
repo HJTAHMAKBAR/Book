@@ -55,6 +55,7 @@ export default {
 @import "../../assets/styles/global";
 .store-home {
   width: 100%;
+  min-width: 1000px;
   height: 100%;
 }
 

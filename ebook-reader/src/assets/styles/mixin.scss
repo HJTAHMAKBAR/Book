@@ -45,6 +45,13 @@ $ratio: 375 / 10;
   align-items: flex-start;
 }
 
+@mixin columnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   color: #666;
   font-size: px2rem(16);
