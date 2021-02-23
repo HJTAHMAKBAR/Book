@@ -13,7 +13,8 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 @import "../../assets/styles/global";
 .store {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
   height: 100%;
   background: white;
 }

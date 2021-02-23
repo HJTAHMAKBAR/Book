@@ -73,7 +73,7 @@ export default {
   width: 100%;
   height: px2rem(300)!important;
   z-index: 250;
-  background: #F0E68C;
+  background: #FFEFD5;
   border-radius: px2rem(8);
   .line {
     width: 100%;

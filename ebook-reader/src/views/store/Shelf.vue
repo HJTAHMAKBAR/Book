@@ -27,7 +27,7 @@ export default {
   width: 100%;
   min-width: 1000px;
   height: 100%;
-  background: #6d7178;
+  background: #EFEFEF;
 
 .shelf-scroll-wrapper {
   position: absolute;

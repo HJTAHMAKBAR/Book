@@ -4,11 +4,11 @@
       <img class="logo" src="../../assets/logo.png" alt="布课网logo">
     </div>
     <div class="title-wrapper">
-      <div class="title-home-wrapper" @click="goToHome" :class="{'selected' : headerSelectedType === 1}">
+      <div class="title-item-wrapper" @click="goToHome" :class="{'selected' : headerSelectedType === 1}">
         <span class="icon-shake icon"></span>
         <span class="title">首页</span>
       </div>
-      <div class="title-shelf-wrapper" @click="goToShelf" :class="{'selected' : headerSelectedType === 2}">
+      <div class="title-item-wrapper" @click="goToShelf" :class="{'selected' : headerSelectedType === 2}">
         <span class="icon-shelf icon"></span>
         <span class="title">书架</span>
       </div>
@@ -86,7 +86,7 @@ export default {
   display: flex;
   width: 100%;
   height: px2rem(48);
-  background: burlywood;
+  background: #CCCCCC;
 
   &.fixed {
     border-bottom: 1px solid #DADFE6;
@@ -107,7 +107,7 @@ export default {
     display: flex;
     width: 20%;
 
-    .title-home-wrapper {
+    .title-item-wrapper {
       width: 50%;
       @include center;
 
@@ -115,21 +115,8 @@ export default {
         padding: px2rem(5);
       }
       &.selected {
-        background-color: #7DA889;
-        box-shadow: 0 px2rem(2) px2rem(2) 0 rgba(0, 0, 0, .5);
-      }
-    }
-
-    .title-shelf-wrapper {
-      width: 50%;
-      @include center;
-
-      .title {
-        padding: px2rem(5);
-      }
-      &.selected {
-        background-color: #7DA889;
-        box-shadow: 0 px2rem(2) px2rem(2) 0 rgba(0, 0, 0, .5);
+        background-color: #EFEFEF;
+        box-shadow: 0 px2rem(2) px2rem(2) 0 rgba(0, 0, 0, .1);
       }
     }
   }
@@ -146,7 +133,7 @@ export default {
 
       .search-input {
         width: 100%;
-        background: #F0E68C;
+        background: #FFEFD5;
         border-radius: px2rem(8);
         padding: px2rem(5) px2rem(15);
         box-sizing: border-box;

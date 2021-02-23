@@ -126,7 +126,10 @@ export const storeHomeMixin = {
       'setOffsetY',
       'setHotSearchOffsetY',
       'setHeaderSelectedType'
-    ])
+    ]),
+    showBookDetail(book) {
+      gotoBookDetail(this, book)
+    }
   }
 
 

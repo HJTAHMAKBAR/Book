@@ -10,6 +10,12 @@ $ratio: 375 / 10;
   align-items: center;
 }
 
+@mixin top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 @mixin left {
   display: flex;
   justify-content: flex-start;
@@ -61,4 +67,64 @@ $ratio: 375 / 10;
   color: #666;
   font-size: px2rem(16);
   font-weight: bold;
+}
+
+.title-big {
+  line-height: px2rem(18);
+  font-size: px2rem(14);
+  max-height: px2rem(36);
+  color: #444;
+  font-weight: bold;
+  @include ellipsis2(3);
+}
+.title-medium {
+  font-size: px2rem(14);
+  line-height: px2rem(16);
+  max-height: px2rem(32);
+  color: #444;
+  font-weight: bold;
+  @include ellipsis2(3);
+}
+.title-small {
+  font-size: px2rem(12);
+  line-height: px2rem(15);
+  max-height: px2rem(30);
+  color: #444;
+  font-weight: bold;
+  @include ellipsis2(2);
+}
+.sub-title-medium {
+  line-height: px2rem(16);
+  font-size: px2rem(14);
+  max-height: px2rem(32);
+  color: #666;
+  @include ellipsis2(2);
+}
+.sub-title {
+  line-height: px2rem(15);
+  font-size: px2rem(12);
+  max-height: px2rem(15);
+  color: #666;
+  @include ellipsis2(1);
+}
+.sub-title-tiny {
+  line-height: px2rem(12);
+  font-size: px2rem(10);
+  max-height: px2rem(12);
+  color: #666;
+  @include ellipsis2(1);
+}
+.third-title {
+  line-height: px2rem(15);
+  font-size: px2rem(12);
+  max-height: px2rem(15);
+  color: #999;
+  @include ellipsis2(1);
+}
+.third-title-tiny {
+  line-height: px2rem(12);
+  font-size: px2rem(10);
+  max-height: px2rem(12);
+  color: #999;
+  @include ellipsis2(1);
 }
